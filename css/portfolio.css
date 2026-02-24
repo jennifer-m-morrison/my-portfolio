@@ -188,7 +188,7 @@ main section {
 }
 
 .rounded {
-    border-top: 4px solid var(--steelblue);
+    border-top: 2px solid var(--steelblue);
     border-radius: 5px;
     margin-bottom: 2rem;
 }
