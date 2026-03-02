@@ -8,6 +8,7 @@
 
 :root {
     --steelblue: #1F5C82;
+    --steelblue-hover: #184a69;
     --lightcoral: #EB8A90;
     --mutedolive: #8FBC8F;
     --whitesmoke: #F2F0EF;
@@ -55,6 +56,8 @@ h1 {
 }
 
 h2 {
+    font-family: 'Spectral', serif;
+    color: var(--steelblue);
     font-size: 1.5rem;
     text-align: center;
     margin-bottom: 1em;
@@ -71,6 +74,20 @@ img {
     display: block;
     max-width: 100%;
     border-radius: 15px;
+}
+
+/* ===== CONTENT WIDTH IMAGE ===== */
+
+.container-image {
+    max-width: 1100px;   /* match your site content width */
+    margin: 2rem auto;
+}
+
+.container-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
 }
 
 ul {
@@ -216,6 +233,12 @@ main section {
     margin: 0 auto;
     max-width: 900px;
     padding: 2rem 2rem;
+    text-align-last: left;
+}
+
+.resume-header {
+    
+    margin-bottom: 2rem;
 }
 
 .resume-section h1 {
@@ -223,8 +246,7 @@ main section {
 }
 
 .resume-section h2 {
-    margin: 3rem 0 0.7rem;
-    text-align: left;
+    margin: 2rem 0 0.7rem;
 }
 
 .resume-section h3 {
@@ -237,8 +259,8 @@ main section {
     margin-bottom: 2rem;
 }
 
-.resume-section a:visited,
-.resume-section a {
+.resume-section h3 a:visited,
+.resume-section h3 a {
     color: var(--black);
     text-decoration: none;
 }
@@ -300,6 +322,11 @@ footer img {
          font-size: 1.05rem;
          line-height: 1.8;
          margin-bottom: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 3rem;
     }
 
     /* Tablet - Navigation Styles */
@@ -391,6 +418,15 @@ footer img {
         align-self: center;
     }
 
+    .project-link:hover {
+        background-color: var(--steelblue-hover);
+        color: var(--white);
+    }
+
+    .resume-section .project-link:hover {
+    text-decoration: none;
+    }
+
     .project-title {
         font-size: 1.5rem;
         margin: 1.5rem 0;
@@ -408,7 +444,7 @@ footer img {
 
     .about-section-container img {
         width: 300px;
-    }
+    } 
 
 
 }  
@@ -426,8 +462,13 @@ footer img {
         padding-top: 1.5rem;
     }
 
-    main h1 {
+    h1 {
         margin-bottom: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-top: 3.5rem;
     }
 
     main p {
@@ -437,7 +478,6 @@ footer img {
 
     /* Desktop: Navigation Styles */
     .title-text h2 {
-        color: var(--steelblue);
         padding: 0;
         margin: 0;
         font-family: 'Spectral', serif;
@@ -517,16 +557,16 @@ footer img {
     /* About Section Styles */
 
     .about-section-container {
-        max-width: 900px;
+        max-width: 850px;
     }
 
     .about-section-container p {
         line-height: 1.9;
     }   
 
-    .about-section-container img {
+ .about-section-container img {
         width: 300px;
-    }
+    } 
     
 
     /* Footer Styles */
