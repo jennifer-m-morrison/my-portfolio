@@ -211,11 +211,11 @@ main section {
 }
 
 /* About Section Styles */
-.about-section {
+.about-section, .hero-section {
     max-width: 1000px;
     margin: 0 auto;
 }
-.about-section-container {
+.about-section-container, .hero-section-container {
     display: flex;
     flex-direction: column;
     align-items: center;
