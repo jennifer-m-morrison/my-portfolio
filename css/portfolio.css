@@ -61,7 +61,7 @@ h1 {
 h2 {
     font-family: 'Spectral', serif;
     color: var(--steelblue);
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.8rem, 3vw, 2rem);
     text-align: center;
     margin-bottom: 1em;
 }
@@ -182,12 +182,10 @@ main section {
 /************ HERO SECTION (MOBILE FIRST) ************/
 
 .hero-section {
-  position: relative;
-  min-height: auto;     
+  position: relative;   
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
   padding: 2rem 1.25rem;     
 }
 
@@ -219,8 +217,7 @@ main section {
   max-width: 55rem;
   padding: 1.5rem;
   border-radius: 18px;
-  background: rgba(242, 240, 239, 0.78); /* soft panel */
-  backdrop-filter: blur(4px);
+  background: rgba(242, 240, 239, 0.9);
 }
 
 .hero-section-container h1 {
@@ -243,10 +240,6 @@ main section {
   text-align: center; 
 }
 
-.hero-text p {
-  text-align: left
-}
-
 /* Image styling */
 .hero-image img {
   width: 100%;
@@ -254,8 +247,7 @@ main section {
   height: auto;
 }
 
-/* Home Page About Me Section */
-
+/* Home Page: About Me Section */
 .home-section {
   padding: 4rem 2rem;
 }
@@ -263,9 +255,8 @@ main section {
 .home-section-container {
   max-width: 1100px;
   margin: 0 auto;
-
   display: flex;
-  flex-direction: column;   /* mobile first */
+  flex-direction: column;   
   gap: 2.5rem;
   align-items: center;
 }
@@ -275,12 +266,58 @@ main section {
 }
 
 .home-image img {
-  width: 100%;
+  width: 80%;
   max-width: 350px;
   height: auto;
 }
 
-/* Projects Section Styles */
+/* Projects section on home page */
+.contact-section {
+  position: relative;   
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;     
+}
+
+.contact-section h2 {
+    color: var(--indigo);
+}
+/* Home Page: Contact section background image */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../images/WebDesignBlueprint1500.jpg") center / cover no-repeat;
+  opacity: 0.35;          
+  z-index: 0;
+}
+
+/* Tint Overlay */
+.contact-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(31, 92, 130, 0.55);
+  z-index: 1;
+}
+
+.contact-section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 18px;
+  background: rgba(242, 240, 239, 0.9);
+  backdrop-filter: blur(8px);
+  text-align: center;
+  z-index: 2;
+}
+.contact-section-container img {
+        max-width: 275px;
+        margin: 0 auto;
+    }
+
+/* Projects Page Styles */
 .project-title {
   font-family: 'Spectral', serif;  
   font-size: 1.25rem;
@@ -297,7 +334,7 @@ main section {
 }
 .project-link {
   display: inline-block;
-  margin: 1rem 0;
+  margin: 1rem;
   padding: 0.6rem 1.4rem;
   border-radius: 15px;
   background-color: var(--steelblue);
@@ -339,7 +376,6 @@ main section {
 }
 
 .resume-header {
-    
     margin-bottom: 2rem;
 }
 
@@ -431,7 +467,6 @@ footer img {
     }
 
     /* Tablet - Navigation Styles */
-    
     .navbar {
         display: grid;
         grid-template-columns: auto 1fr;
@@ -476,7 +511,7 @@ footer img {
         gap: 0;
     }
 
-    /* Hero Section Styles */
+    /* Tablet - Hero Section Styles */
     .hero-text > :last-child {
         text-align: center;
     }
@@ -485,11 +520,29 @@ footer img {
         max-width: 40rem;   
      }
 
-     /* .hero-section-container p {
-        padding: 0 2rem;
-     } */
+    /* TabletHome Page Contact Section Styles */
+    .contact-section h2 {
+        margin: 0 0 1.5rem;
+    }
 
-    /* Projects Section Styles */
+    .contact-section-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        width: 70%;
+    }
+
+    .contact-image {
+    flex: 1;
+}
+
+.contact-text {
+    flex: 1;
+}
+
+
+    /* Projects Page Styles */
      .projects-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -524,7 +577,6 @@ footer img {
         text-align: left;
         padding-bottom: 2rem;
         font-size: 1.2rem;
-        
     }
   
     .project-link {
@@ -654,12 +706,9 @@ footer img {
     text-align: center;    /* center h1 */
     }
 
-    .hero-text p {
-    text-align: left;
-    }
 
     .hero-text .project-link {
-    align-self: center;        /* center just the button */
+    align-self: center;
     }
 
     .hero-image {
