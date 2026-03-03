@@ -179,8 +179,7 @@ main section {
     padding: 2rem 2rem;
 }
 
-/************ HERO SECTION (MOBILE FIRST) ************/
-
+/* Home Page: Hero Section Styles */
 .hero-section {
   position: relative;   
   display: flex;
@@ -228,7 +227,6 @@ main section {
   margin-bottom: 1.5rem;
 }
 
-/* HERO FLEX LAYOUT */
 .hero-flex {
   display: flex;
   flex-direction: column; 
@@ -240,10 +238,9 @@ main section {
   text-align: center; 
 }
 
-/* Image styling */
 .hero-image img {
   width: 100%;
-  max-width: 420px;
+  max-width: 300px;
   height: auto;
 }
 
@@ -268,10 +265,10 @@ main section {
 .home-image img {
   width: 80%;
   max-width: 350px;
-  height: auto;
+  margin: 0 auto;
 }
 
-/* Projects section on home page */
+/* Home Page: Contact section */
 .contact-section {
   position: relative;   
   display: flex;
@@ -334,13 +331,18 @@ main section {
 }
 .project-link {
   display: inline-block;
-  margin: 1rem;
   padding: 0.6rem 1.4rem;
+  margin: 1rem 0;
   border-radius: 15px;
   background-color: var(--steelblue);
   color: var(--white);
   text-decoration: none;
   font-weight: 500;
+  
+}
+
+.contact-text .project-link {
+    margin: 1rem;
 }
 
 .rounded {
@@ -349,7 +351,7 @@ main section {
     margin-bottom: 2rem;
 }
 
-/* About Section Styles */
+/* About Page Styles */
 .about-section {
     max-width: 1000px;
     margin: 0 auto;
@@ -367,7 +369,7 @@ main section {
     width: 80%;
 }
 
-/* Resume Section Styles */
+/* Resume Page Styles */
 .resume-section {
     margin: 0 auto;
     max-width: 900px;
@@ -385,6 +387,8 @@ main section {
 
 .resume-section h2 {
     margin: 2rem 0 0.7rem;
+    text-align: left;
+    font-size: 1.4rem;
 }
 
 .resume-section h3 {
@@ -525,22 +529,6 @@ footer img {
         margin: 0 0 1.5rem;
     }
 
-    .contact-section-container {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 1.5rem;
-        width: 70%;
-    }
-
-    .contact-image {
-    flex: 1;
-}
-
-.contact-text {
-    flex: 1;
-}
-
 
     /* Projects Page Styles */
      .projects-grid {
@@ -619,7 +607,7 @@ footer img {
 
 @media (min-width:1050px) {
 
-    /* Add content for desktop display */
+    /* Desktop: General Styles */
     .desktop {
         display: block;
     }
@@ -690,7 +678,7 @@ footer img {
         flex-wrap: nowrap;
     }
 
-    /*Hero Section Styles */
+    /* Desktop: Home Page - Hero Section Styles */
     .hero-flex {
     flex-direction: row;
     justify-content: space-between;
@@ -706,7 +694,6 @@ footer img {
     text-align: center;    /* center h1 */
     }
 
-
     .hero-text .project-link {
     align-self: center;
     }
@@ -717,7 +704,11 @@ footer img {
     justify-content: center;
      }
 
-     /* Home Page About Me Styles */
+    .hero-image img { 
+            max-width: 400px;
+        }
+
+     /* Desktop: Home Page -  About Me Styles */
      .home-section-container {
         max-width: 750px;
         flex-direction: row;
@@ -725,17 +716,34 @@ footer img {
         justify-content: space-between;
     }
 
-  .home-text {
-    flex: 1;
-  }
+    .home-text {
+        flex: 1;
+    }
 
-  .home-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-  }
+    .home-image {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
 
-    /* Projects Section Styles */
+  /* Desktop: Home Page - Contact Section Styles */
+    .contact-section-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+        width: 70%;
+    }
+
+    .contact-image {
+    flex: 1;
+    }
+
+    .contact-text {
+    flex: 1;
+    }
+
+    /* Projects Page Styles */
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
         max-width: 1150px;
@@ -756,7 +764,6 @@ footer img {
       0 8px 16px rgba(0, 0, 0, 0.08);
         }
 
-
     .project-image {
         border-radius: 16px;
         margin-bottom: 1rem;
@@ -769,8 +776,7 @@ footer img {
         box-shadow: 0 8px 10px rgba(0, 1, 0, 1);
     }
 
-    /* About Section Styles */
-
+    /* About Page Styles */
     .about-section-container {
         max-width: 850px;
     }
@@ -783,7 +789,6 @@ footer img {
         width: 300px;
     } 
     
-
     /* Footer Styles */
     .social-links a {
         color: var(--indigo);
@@ -791,7 +796,5 @@ footer img {
         margin: 0 0.5rem;
     }
 
-
-   
 }
 
