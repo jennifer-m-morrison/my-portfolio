@@ -322,15 +322,18 @@ main section {
 }
 
 .project-item, .project-home-item {
-  max-width: 420px;
-  margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 420px;
+    margin: 0 auto 2rem;
 }
 
 .project-item img, .project-home-item img {
   margin-bottom: 1rem;
 }
 .project-link {
-  display: inline-block;
   padding: 0.6rem 1.4rem;
   margin: 1rem 0;
   border-radius: 15px;
@@ -366,6 +369,7 @@ main section {
 
 .about-section img {
     width: 80%;
+    max-width: 350px;
 }
 
 /* Mobile Resume Page Styles */
@@ -443,7 +447,6 @@ footer .fa-lg {
 footer img {
     margin: 0 auto;
 }
-    
 
 /*************** TABLET DISPLAY ***************/
 
@@ -524,7 +527,6 @@ footer img {
         max-width: 40rem;   
      }
 
-
     /* Tablet - Contact Section Styles */
 
     .contact-section {
@@ -533,7 +535,6 @@ footer img {
     .contact-section h2 {
         margin: 0 0 1.5rem;
     }
-
 
     /* Tablet - Projects Page Styles */
      .projects-grid, .projects-home-grid {
@@ -589,7 +590,7 @@ footer img {
         margin: 1.5rem 0;
     }
 
-    /* Tablet - bout Section Styles */
+    /* Tablet - About Section Styles */
     .about-section-container {
         flex-direction: row;
         align-items: flex-start;
@@ -598,10 +599,21 @@ footer img {
         margin: 2rem auto 2rem;
     }
 
+    .about-section-container:first-of-type {
+        margin-top: 1.8rem;
+    }
+
     .about-section-container img {
         width: 300px;
+        margin-bottom: 1rem;
     } 
 
+    .about-section .container-image {
+        max-width: 450px;
+        margin-bottom: 3rem;
+    } 
+
+    
 }  
 
 /*************** DESKTOP  DISPLAY ***************/
@@ -795,17 +807,22 @@ footer img {
 
     /* Desktop: About Page Styles */
     .about-section-container {
-        max-width: 850px;
+        max-width: 850px;   
     }
 
     .about-section-container p {
         line-height: 1.9;
+        margin-bottom: 0;
     }   
 
-    .about-section-container img {
-        width: 300px;
+    .about-section img {
+        max-width: 550px;
     } 
-    
+
+    .about-section .container-image {
+        margin: .8rem auto 3.5rem;
+    }
+   
     /* Desktop: Footer Styles */
     .social-links a {
         color: var(--indigo);
