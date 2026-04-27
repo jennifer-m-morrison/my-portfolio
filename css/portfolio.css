@@ -815,12 +815,9 @@ footer img {
         margin-bottom: 0;
     }   
 
-    .about-section img {
-        max-width: 550px;
-    } 
-
     .about-section .container-image {
         margin: .8rem auto 3.5rem;
+        max-width: 550px;
     }
    
     /* Desktop: Footer Styles */
