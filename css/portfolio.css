@@ -179,7 +179,7 @@ main section {
     padding: 2rem 2rem;
 }
 
-/* Home Page: Hero Section Styles */
+/* Mobile Home Page: Hero Section Styles */
 .hero-section {
   position: relative;   
   display: flex;
@@ -244,7 +244,7 @@ main section {
   height: auto;
 }
 
-/* Home Page: About Me Section */
+/* Mobile Home Page: About Me Section */
 .home-section {
   padding: 4rem 2rem;
 }
@@ -268,7 +268,7 @@ main section {
   margin: 0 auto;
 }
 
-/* Home Page: Contact section */
+/* Mobile Home Page: Contact section */
 .contact-section {
   position: relative;   
   display: flex;
@@ -280,7 +280,7 @@ main section {
 .contact-section h2 {
     color: var(--indigo);
 }
-/* Home Page: Contact section background image */
+/* Mobile Home Page: Contact section background image */
 .contact-section::before {
   content: "";
   position: absolute;
@@ -314,19 +314,19 @@ main section {
         margin: 0 auto;
     }
 
-/* Projects Page Styles */
+/* Mobile Projects Page Styles and Project Styles on Home Page */
 .project-title {
   font-family: 'Spectral', serif;  
   font-size: 1.25rem;
   margin: 1rem 0;
 }
 
-.project-item {
+.project-item, .project-home-item {
   max-width: 420px;
   margin: 0 auto 2rem;
 }
 
-.project-item img {
+.project-item img, .project-home-item img {
   margin-bottom: 1rem;
 }
 .project-link {
@@ -338,7 +338,6 @@ main section {
   color: var(--white);
   text-decoration: none;
   font-weight: 500;
-  
 }
 
 .contact-text .project-link {
@@ -351,7 +350,7 @@ main section {
     margin-bottom: 2rem;
 }
 
-/* About Page Styles */
+/* Mobile About Page Styles */
 .about-section {
     max-width: 1000px;
     margin: 0 auto;
@@ -369,7 +368,7 @@ main section {
     width: 80%;
 }
 
-/* Resume Page Styles */
+/* Mobile Resume Page Styles */
 .resume-section {
     margin: 0 auto;
     max-width: 900px;
@@ -417,7 +416,7 @@ main section {
     gap: 1.5rem;
 }
 
-/* Footer Styles */
+/* MobileFooter Styles */
 footer {
     background-color: var(--ltgrey);
     color: var(--indigo);
@@ -460,6 +459,7 @@ footer img {
         display: block;
     }
 
+    /* Tablet - General Styles */
     main p {
          font-size: 1.05rem;
          line-height: 1.8;
@@ -515,7 +515,7 @@ footer img {
         gap: 0;
     }
 
-    /* Tablet - Hero Section Styles */
+    /* Tablet - Home Page: Hero Section Styles */
     .hero-text > :last-child {
         text-align: center;
     }
@@ -524,14 +524,19 @@ footer img {
         max-width: 40rem;   
      }
 
-    /* TabletHome Page Contact Section Styles */
+
+    /* Tablet - Contact Section Styles */
+
+    .contact-section {
+        padding: 3.5rem;
+    }
     .contact-section h2 {
         margin: 0 0 1.5rem;
     }
 
 
-    /* Projects Page Styles */
-     .projects-grid {
+    /* Tablet - Projects Page Styles */
+     .projects-grid, .projects-home-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
@@ -541,7 +546,7 @@ footer img {
         gap: 2rem;
   }
 
-    .project-item {
+    .project-item, .project-home-item {
         display: flex;
         flex-direction: column;
         color: var(--indigo);
@@ -559,7 +564,7 @@ footer img {
         transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.25s ease;
     }
 
-    .project-item p {
+    .project-item p, .project-home-item p {
         text-align: left;
         padding-bottom: 2rem;
         font-size: 1.2rem;
@@ -584,7 +589,7 @@ footer img {
         margin: 1.5rem 0;
     }
 
-    /* About Section Styles */
+    /* Tablet - bout Section Styles */
     .about-section-container {
         flex-direction: row;
         align-items: flex-start;
@@ -596,7 +601,6 @@ footer img {
     .about-section-container img {
         width: 300px;
     } 
-
 
 }  
 
@@ -689,7 +693,7 @@ footer img {
     padding-right: 2rem;
     flex-direction: column;
     align-items: center;
-    text-align: center;    /* center h1 */
+    text-align: center;
     }
 
     .hero-text .project-link {
@@ -741,7 +745,22 @@ footer img {
     flex: 1;
     }
 
-    /* Projects Page Styles */
+    /* Desktop: Home Page - Projects Section Styles */
+    .home-projects-section h2 {
+        margin: .5rem 0;
+    }
+
+    .projects-home-grid {
+        max-width: 1100px;
+        gap: 1.8rem; 
+    }
+
+    .project-home-item {
+        max-width: 450px;
+    }
+
+
+    /* Desktop: Projects Page Styles */
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
         max-width: 1150px;
@@ -762,19 +781,19 @@ footer img {
       0 8px 16px rgba(0, 0, 0, 0.08);
         }
 
-    .project-image {
+    .project-image, .project-home-image {
         border-radius: 16px;
         margin-bottom: 1rem;
     }
 
-    .project-image img {
+    .project-image img, .project-home-image img {
         display: block;
         width: 100%;
         border-radius: 14px;
         box-shadow: 0 8px 10px rgba(0, 1, 0, 1);
     }
 
-    /* About Page Styles */
+    /* Desktop: About Page Styles */
     .about-section-container {
         max-width: 850px;
     }
@@ -787,7 +806,7 @@ footer img {
         width: 300px;
     } 
     
-    /* Footer Styles */
+    /* Desktop: Footer Styles */
     .social-links a {
         color: var(--indigo);
         font-size: 1.5rem;
