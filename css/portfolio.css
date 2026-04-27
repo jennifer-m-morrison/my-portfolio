@@ -67,8 +67,7 @@ h2 {
 }
 
 p,
-li,
-label {
+li {
     font-size: 1.1rem;
     line-height: 1.7;
 }
@@ -312,7 +311,11 @@ main section {
 .contact-section-container img {
         max-width: 350px;
         margin: 0 auto;
-    }
+}
+
+.contact-text p {
+    margin-bottom: 2.3rem;
+}
 
 /* Mobile Projects Page Styles and Project Styles on Home Page */
 .project-title {
@@ -369,7 +372,7 @@ main section {
 
 .about-section img {
     width: 80%;
-    max-width: 350px;
+    max-width: 300px;
 }
 
 /* Mobile Resume Page Styles */
